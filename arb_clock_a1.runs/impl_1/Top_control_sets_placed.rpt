@@ -1,0 +1,96 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Thu Apr 22 16:52:43 2021
+| Host         : DESKTOP-MPPVHK7 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
+| Design       : Top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    18 |
+|    Minimum number of control sets                        |    18 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    90 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    18 |
+| >= 0 to < 4        |     6 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              36 |           23 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             206 |           56 |
+| Yes          | No                    | No                     |               7 |            4 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               5 |            2 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-------------------------------+--------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |         Enable Signal         |           Set/Reset Signal           | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-------------------------------+--------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG |                               | gar/timeLEDs[0]                      |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG |                               | gar/timeLEDs[1]                      |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | debl/beat_deb/count_reg[1]_0  |                                      |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | debl2/beat_deb/count_reg[1]_0 |                                      |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | nLight/beat/timeupNight_reg   |                                      |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | gar/timeLEDs[2]_i_2_n_0       | gar/timeLEDs[2]                      |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG | nLight/beat/E[0]              | nLight/beat/SR[0]                    |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | gar/beat_deb/E[0]             |                                      |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG |                               | tem/beat1/count[13]_i_1_n_0          |                4 |             13 |         3.25 |
+|  clk_IBUF_BUFG |                               | debl/beat_deb/count_reg[1]_0         |                5 |             19 |         3.80 |
+|  clk_IBUF_BUFG |                               | debl2/beat_deb/count_reg[1]_0        |                5 |             19 |         3.80 |
+|  clk_IBUF_BUFG |                               | debl/beat_deb2/count[24]_i_1_n_0     |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG |                               | debl2/beat_deb2/count[24]_i_1__0_n_0 |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG |                               | nLight/beat/count[26]_i_1_n_0        |                7 |             26 |         3.71 |
+|  clk_IBUF_BUFG |                               | gar/beat_deb/clkdown                 |                7 |             26 |         3.71 |
+|  clk_IBUF_BUFG |                               | tem/beat2/count_reg[8]_0             |                7 |             26 |         3.71 |
+|  clk_IBUF_BUFG |                               | tem/beat3/count[27]_i_1_n_0          |                7 |             27 |         3.86 |
+|  clk_IBUF_BUFG |                               |                                      |               23 |             36 |         1.57 |
++----------------+-------------------------------+--------------------------------------+------------------+----------------+--------------+
+
+
