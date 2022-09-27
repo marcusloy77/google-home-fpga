@@ -1,7 +1,7 @@
 # google-home-fpga
 Basic google home like program for an fpga board - 
 utilized vivado, 
-all of my coded files are in the src folder, 
+all of my coded files are in the src folder, sources1, new
 
 including features such as:
 a 'garage door sensor', 
